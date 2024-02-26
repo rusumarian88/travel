@@ -1,0 +1,12 @@
+
+<div class="card">
+    <div [ngClass]="{small:small}" [ngStyle]="{'background-image':'url('+photo+')'}" class="photo"></div>
+    <div class="content">
+        <div class="title">{{title}}</div>
+        <div class="description">{{description}}</div>
+        <div class="time">
+            <img class="icon" [src]="icon">
+            <div class="text">{{text}}</div>
+        </div>
+    </div>
+</div>

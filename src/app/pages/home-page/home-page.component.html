@@ -1,0 +1,33 @@
+
+<app-nav-bar></app-nav-bar>
+<app-heder></app-heder>
+<div class="news">
+    <div class="title">
+        <div class="text">MORE NEWS</div>
+        <div class="btns">
+            <div class="btn-left"><span class="material-symbols-outlined icon">arrow_circle_left</span></div>
+            <div class="btn-right"><span class="material-symbols-outlined icon">arrow_circle_right</span></div>
+        </div>
+    </div>
+    <div class="bar"></div>
+    <div class="news-cards">
+        <app-news-card *ngFor="let n of newsService.news" [title]="n.title" [description]="n.description"></app-news-card>
+    </div>
+</div>
+<app-section-with-title title="DISCOVERY">
+    <div class="discovery-cards">
+        <app-discovery-card class="disc-card" *ngFor="let d of discoveryService.discovery" [photo]="d.photo" [title]="d.title" [description]="d.description" [icon]="d.icon" [text]="d.text"></app-discovery-card>
+    </div>
+</app-section-with-title>
+<app-section-with-title class="sec" title="PHOTOGRAPH">
+    <div class="content-photograph">
+        <div class="left">
+            <app-photograph-card class="photograph-card" *ngFor="let p of photographService.photographs" [bg]="p.bg" [title]="p.title" [description]="p.description"></app-photograph-card>
+        </div>
+        <div class="right">
+            <app-discovery-card class="discoveryA" *ngFor="let d of discoveryService.discoveryA" [small]="true" [photo]="d.photo" [title]="d.title" [description]="d.description" [icon]="d.icon" [text]="d.text"></app-discovery-card>
+        </div>
+    </div>
+</app-section-with-title>
+<app-bar-bottom></app-bar-bottom>
+

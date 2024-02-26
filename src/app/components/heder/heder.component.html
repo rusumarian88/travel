@@ -1,0 +1,26 @@
+
+<div class="heder">
+    <div class="content">
+        <div class="left">
+            <div class="title">TRAVEL NEWS</div>
+            <div class="bar"></div>
+            <div class="description">Lorem ipsum dolor sit amet consectetur. Lectus diam turpis condimentum convallis in. Ac lorem cras laoreet proin suscipit tempor nibh fermentum. Quisque varius sit elit placerat nulla ullamcorper eget. Lobortis semper nec augue sed aliquam. In eget mattis dui arcu mauris blandit. Elementum neque magna vestibulum amet sagittis vel.</div>
+            <div class="second-title">Get 10% Off on your next travel</div>
+            <div class="mail-and-btn">
+                <input class="email" type="email" placeholder="Enter your E-Mail">
+                <div class="btn">SUBSCRIBE</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title-right">
+                <div class="text">MORE NEWS</div>
+                <div class="btns">
+                    <div class="btn-left"><span class="material-symbols-outlined icon">arrow_circle_left</span></div>
+                    <div class="btn-right"><span class="material-symbols-outlined icon">arrow_circle_right</span></div>
+                </div> 
+            </div>
+            <div class="bar-right"></div>
+            <app-news-card *ngFor="let n of newsService.news" [title]="n.title" [description]="n.description"></app-news-card>
+        </div>
+    </div>
+</div>

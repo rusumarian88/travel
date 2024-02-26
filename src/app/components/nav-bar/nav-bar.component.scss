@@ -1,0 +1,70 @@
+
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+    width: 100%;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 40px;
+    height: 50px;
+}
+
+.logo{
+    height: 38px;
+}
+
+.menu-btn{
+    width: 32px;
+    height: 32px;
+    background-image: url("/assets/menu-btn.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.logo{
+    height: 38px;
+}
+
+.menu-item{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin-right: 24px;
+    vertical-align: middle;
+    font-family: 'ABeeZee',sans-serif;
+    cursor: pointer;
+}
+
+.profile{
+    width: 24px;
+    margin-left: 16px;
+    vertical-align: middle;
+}
+
+@media screen and (min-width:$max-width-break-point) {
+    .menu-btn{
+        display: none;
+    }
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .menu-item{
+        display: none;
+    }
+    .bar{
+        @include latime;
+    }
+}

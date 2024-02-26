@@ -1,0 +1,21 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 31px 0;
+    background-color: rgba(0, 0, 0, 1);
+    height: 100px;
+}
+
+.logo{
+    height: 38px;
+}
